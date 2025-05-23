@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROT13 Encode</title>
+  <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="toolbar">
+      <span>Journal Note 01-08-2024</span>
+      <button id="encode-button">Зашифровать</button>
+    </div>
+    <div class="columns">
+      <div class="text-column editor">
+        <h2>Editor</h2>
+        <textarea id="original-text" class="text-content" rows="6" cols="40"></textarea>
+      </div>
+      <div class="text-column co-pilot">
+        <div class="badge">Co-Pilot</div>
+        <h2>Encoded</h2>
+        <div id="encoded-text" class="text-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/index.js"></script>
+</body>
+</html>
