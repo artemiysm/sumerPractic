@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f6f6f6;
+  color: #111;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #888;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar .title {
+  font-weight: bold;
+  color: #333;
+}
+
+#encode-button {
+  padding: 8px 16px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#encode-button:hover {
+  background-color: #4f46e5;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.text-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.text-column h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.text-content {
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin-top: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+textarea.text-content {
+  height: 150px;
+}
+
+.co-pilot {
+  background-color: #f5f3ff;
+  color: #4c1d95;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: #ede9fe;
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .text-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0 10px;
+  }
+
+  #encode-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-content {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .text-column h2 {
+    font-size: 14px;
+  }
+}
